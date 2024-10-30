@@ -103,6 +103,10 @@ const SkillItem = styled.div`
   align-items: center;
   justify-content: center;
   gap: 8px;
+  :hover {
+      background: ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.white};  
+    }
   @media (max-width: 768px) {
     font-size: 14px;
     padding: 8px 12px;
@@ -123,9 +127,8 @@ const Skills = () => {
   return (
     <Container id="skills">
       <Wrapper>
-        <Title>Skills</Title>
-        <Desc>Here are some of my skills on which I have been working on for the past 2 years.
-        </Desc>
+        <Title>Habilidades</Title>
+        {/* <Desc>Here are some of my skills on which I have been working on for the past 2 years.</Desc> */}
         <SkillsContainer>
           {skills.map((skill) => (
             <Skill>
